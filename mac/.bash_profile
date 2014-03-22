@@ -23,6 +23,7 @@ alias         ll='ls -alh'
 alias          b='cd ..'
 alias          c='clear'
 alias       code='cd ~/Documents/Code'
+alias       data='cd ~/Documents/Data'
 alias startmongo='mongod --config ~/.mongodb.conf'
 
 export PATH=$GIT_PATH:$NODE_PATH:$MONGODB_PATH:$REDIS_PATH:$PATH
