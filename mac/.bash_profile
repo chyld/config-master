@@ -10,21 +10,23 @@ txtrst='\[\e[0m\]'    # Text Reset
 
 GIT_PATH=/usr/local/git/bin
 NODE_PATH=/usr/local/node/bin
+MONGODB_PATH=/usr/local/mongodb/bin
+REDIS_PATH=/usr/local/redis/bin
 
 function getip
 {
   ipconfig getifaddr en0
 }
 
-alias    l='ls -a'
-alias   ll='ls -alh'
-alias    b='cd ..'
-alias    c='clear'
-alias code='cd ~/Documents/Code'
+alias          l='ls -a'
+alias         ll='ls -alh'
+alias          b='cd ..'
+alias          c='clear'
+alias       code='cd ~/Documents/Code'
+alias startmongo='mongod --config ~/.mongodb.conf'
 
-export PATH=$GIT_PATH:$NODE_PATH:$PATH
+export PATH=$GIT_PATH:$NODE_PATH:$MONGODB_PATH:$REDIS_PATH:$PATH
 export EDITOR=vim
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export PS1="$txtcyn\u$txtred@$txtgrn\h [$(getip)] $txtred\w$txtblk >$txtrst "
-
